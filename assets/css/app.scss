@@ -1,2 +1,16 @@
 /* This file is for your main application css. */
 @import "../node_modules/nprogress/nprogress.css";
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+three-game {
+  width: 100vw;
+  height: 100vh;
+}
