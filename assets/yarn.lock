@@ -822,6 +822,14 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
+"@three-elements/loaders@^0.4.0-alpha.14":
+  version "0.4.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/@three-elements/loaders/-/loaders-0.4.0-alpha.14.tgz#afe37dfb9d54552c1da39f27a3dd97e57c009d27"
+  integrity sha512-6C9R6NmFjSLlbdH1wREHM+KIbk/bdXkDj6VqgYO1lklwtZ4W2UtD6Y8wLNlqQNUX8lj3MRewb2BrqjWXSNM6SQ==
+  dependencies:
+    three ">=0.125.2"
+    three-elements "^0.4.0-alpha.14"
+
 "@types/json-schema@^7.0.5":
   version "7.0.7"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.7.tgz#98a993516c859eb0d5c4c8f098317a9ea68db9ad"
@@ -5620,7 +5628,7 @@ three-elements@^0.4.0-alpha.14:
   resolved "https://registry.yarnpkg.com/three-elements/-/three-elements-0.4.0-alpha.14.tgz#3f60e3eb8e83421942eb8117664fb6c964b709f2"
   integrity sha512-eEkhO42Mryk1wYM3vexoZIPfVblDBg0iMyKIrx1kS6f14of5G+w5PYoKF02/ZVQlFuV8kABwGc7gw/adP6CIdA==
 
-three@^0.126.0:
+three@>=0.125.2, three@^0.126.0:
   version "0.126.0"
   resolved "https://registry.yarnpkg.com/three/-/three-0.126.0.tgz#924818341cd4441ef247e3cbf236f6160b90a216"
   integrity sha512-/MecvboUefStCkUfXLImoJxthN+FoLPcEP7pz1r1Dd9i8BPGGuj+S1sOPRvW4Z+ViZjP2oWWm1inNC/MT52ybA==
