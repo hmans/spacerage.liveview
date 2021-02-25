@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :space_rage, SpaceRage.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "hmans",
+  password: "",
   database: "space_rage_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
