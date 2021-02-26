@@ -14,9 +14,10 @@ defmodule SpaceRage.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: SpaceRage.PubSub},
       # Start the Endpoint (http/https)
-      SpaceRageWeb.Endpoint
+      SpaceRageWeb.Endpoint,
       # Start a worker by calling: SpaceRage.Worker.start_link(arg)
       # {SpaceRage.Worker, arg}
+      {SpaceRage.SectorServer, nil}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
