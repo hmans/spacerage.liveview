@@ -4,8 +4,8 @@
     <three-directional-light intensity="0.8"></three-directional-light>
 
     <%= if assigns[:players] do %>
-      <%= for player <- assigns[:players] do %>
-        <three-gltf-asset url="/assets/models/spaceship/spaceship.gltf"></three-gltf-asset>
+      <%= for {_id, %{position: {x, y, z}}} <- assigns[:players] do %>
+        <three-gltf-asset position="<%= x %> <%= y %> <%= z %>" url="/assets/models/spaceship/spaceship.gltf"></three-gltf-asset>
       <% end  %>
     <% end  %>
 

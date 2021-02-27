@@ -2,7 +2,8 @@ defmodule SpaceRageWeb.SectorLive do
   use SpaceRageWeb, :live_view
 
   alias Phoenix.PubSub
-  alias SpaceRage.{Player, Sector, SectorServer}
+  alias SpaceRage.{Player, SectorServer}
+  alias Momentum.{Vector3}
 
   @impl true
   def mount(_params, _session, socket) do
@@ -20,7 +21,11 @@ defmodule SpaceRageWeb.SectorLive do
       PubSub.broadcast(
         SpaceRage.PubSub,
         "sector:1",
-        {:new_player, %Player{id: socket.assigns.player_id}}
+        {:new_player,
+         %Player{
+           id: socket.assigns.player_id,
+           position: Vector3.random() |> Vector3.scale(50)
+         }}
       )
     end
 
