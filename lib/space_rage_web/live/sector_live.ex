@@ -1,4 +1,4 @@
-defmodule SpaceRageWeb.GameLive do
+defmodule SpaceRageWeb.SectorLive do
   use SpaceRageWeb, :live_view
 
   alias Phoenix.PubSub

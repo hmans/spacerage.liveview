@@ -17,7 +17,7 @@ defmodule SpaceRageWeb.Router do
   scope "/", SpaceRageWeb do
     pipe_through :browser
 
-    live "/", GameLive, :index
+    live "/", SectorLive, :index
   end
 
   # Other scopes may use custom stacks.
