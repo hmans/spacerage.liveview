@@ -13,14 +13,14 @@ defmodule SpaceRageWeb.GameLive do
       )
 
       # Notify pubsub about the arrival of this player
-      PubSub.broadcast(SpaceRage.PubSub, "sector:1", {:new_player})
+      PubSub.broadcast(SpaceRage.PubSub, "sector:1", {:new_player, SpaceRage.Player.new()})
     end
 
     {:ok, socket}
   end
 
   @impl true
-  def handle_info({:new_player}, socket) do
+  def handle_info({:new_player, player}, socket) do
     {:noreply, socket}
   end
 end
