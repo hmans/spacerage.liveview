@@ -28,6 +28,11 @@ defmodule SpaceRage.SectorServer do
     {:noreply, %{state | players: [player | state.players]}}
   end
 
+  @impl true
+  def handle_call(:get_players, _, state) do
+    {:reply, state.players, state}
+  end
+
   defp log(text) do
     IO.puts("[SectorServer] " <> text)
   end

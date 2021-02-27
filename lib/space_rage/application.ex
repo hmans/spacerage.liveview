@@ -17,7 +17,7 @@ defmodule SpaceRage.Application do
       SpaceRageWeb.Endpoint,
       # Start a worker by calling: SpaceRage.Worker.start_link(arg)
       # {SpaceRage.Worker, arg}
-      {SpaceRage.SectorServer, nil}
+      {SpaceRage.SectorServer, 1}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
