@@ -2,7 +2,7 @@ defmodule SpaceRageWeb.SectorLive do
   use SpaceRageWeb, :live_view
 
   alias Phoenix.PubSub
-  alias SpaceRage.Player
+  alias SpaceRage.{Player, Sector, SectorServer}
 
   @impl true
   def mount(_params, _session, socket) do
@@ -14,6 +14,7 @@ defmodule SpaceRageWeb.SectorLive do
       )
 
       socket = assign(socket, player_id: UUID.uuid4())
+      socket = assign(socket, players: SectorServer.get_players(1))
 
       # Notify pubsub about the arrival of this player
       PubSub.broadcast(
@@ -23,7 +24,10 @@ defmodule SpaceRageWeb.SectorLive do
       )
     end
 
-    {:ok, socket}
+    {:ok, socket,
+     temporary_assigns: [
+       players: []
+     ]}
   end
 
   @impl true

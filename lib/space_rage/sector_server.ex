@@ -4,7 +4,12 @@ defmodule SpaceRage.SectorServer do
   alias SpaceRage.Sector
 
   def start_link(sector_id),
-    do: GenServer.start_link(__MODULE__, sector_id, name: :"sector:#{sector_id}")
+    do: GenServer.start_link(__MODULE__, sector_id, name: name(sector_id))
+
+  def get_players(sector_id),
+    do: GenServer.call(name(sector_id), :get_players)
+
+  def name(sector_id), do: String.to_atom("sector:#{sector_id}")
 
   @impl true
   def init(sector_id) do
