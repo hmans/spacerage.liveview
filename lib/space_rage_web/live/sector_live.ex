@@ -32,6 +32,7 @@ defmodule SpaceRageWeb.SectorLive do
 
   @impl true
   def handle_info({:new_player, _player}, socket) do
+    socket = assign(socket, players: SectorServer.get_players(1))
     {:noreply, socket}
   end
 end

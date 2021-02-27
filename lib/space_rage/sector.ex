@@ -1,3 +1,3 @@
 defmodule SpaceRage.Sector do
-  defstruct id: nil, players: {}
+  defstruct id: nil, players: %{}
 end

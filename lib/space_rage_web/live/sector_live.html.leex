@@ -3,7 +3,11 @@
     <three-ambient-light intensity="0.1"></three-ambient-light>
     <three-directional-light intensity="0.8"></three-directional-light>
 
-    <three-gltf-asset url="/assets/models/spaceship/spaceship.gltf"></three-gltf-asset>
+    <%= if assigns[:players] do %>
+      <%= for player <- assigns[:players] do %>
+        <three-gltf-asset url="/assets/models/spaceship/spaceship.gltf"></three-gltf-asset>
+      <% end  %>
+    <% end  %>
 
     <three-orbit-controls></three-orbit-controls>
   </space-scene>

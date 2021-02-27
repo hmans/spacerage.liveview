@@ -25,7 +25,7 @@ defmodule SpaceRage.SectorServer do
   @impl true
   def handle_info({:new_player, player}, state) do
     log("Adding new player " <> player.id)
-    {:noreply, %{state | players: [player | state.players]}}
+    {:noreply, %{state | players: Map.put(state.players, player.id, player)}}
   end
 
   @impl true
