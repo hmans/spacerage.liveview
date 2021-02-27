@@ -17,6 +17,7 @@ defmodule SpaceRage.Application do
       SpaceRageWeb.Endpoint,
       # Start a worker by calling: SpaceRage.Worker.start_link(arg)
       # {SpaceRage.Worker, arg}
+      {Registry, keys: :unique, name: SectorRegistry},
       {SpaceRage.SectorServer, 1}
     ]
 

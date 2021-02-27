@@ -9,7 +9,7 @@ defmodule SpaceRage.SectorServer do
   def get_players(sector_id),
     do: GenServer.call(name(sector_id), :get_players)
 
-  def name(sector_id), do: String.to_atom("sector:#{sector_id}")
+  def name(sector_id), do: {:via, Registry, {SectorRegistry, "sector:#{sector_id}"}}
 
   @impl true
   def init(sector_id) do
